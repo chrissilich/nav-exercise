@@ -1,12 +1,64 @@
 @import "fonts.css";
 
-body {
-  background: #ec008c;
+html, body {
+  margin: 0;
+  padding: 0;
   color: #fff;
+  font-family: 'HUGEAvantGardeBold', 'Galaxie', Sans-Serif;
+}
+
+.huge-logo {
+  background-image: url(../images/HUGE-white.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  height: 24px;
+  width: 60px;
+}
+
+nav {
+  background: #ec008c;
+  overflow: hidden;
+  height: 72px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 134px;
+}
+
+ul li {
+  display: inline-block;
+  list-style: none;
+  height: 72px;
+  padding: 0 12px;
+}
+
+ul li:hover {
+  background: white;
+  color: #ec008c;
+  cursor: pointer;
+}
+
+ul li a {
+  display: block;
+  font-size: 1em;
+  margin-top: 31px;
+}
+
+header {
+  background-image: url(../images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 640px;
 }
 
 h1 {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -15,4 +67,16 @@ h1 {
   font: 20vmin/1 HUGEAvantGardeBold;
   letter-spacing: -0.06em;
   text-align: center;
+}
+
+.content {
+  width: 70%;
+  color: black;
+  font-family: 'Galaxie', Sans-Serif;
+  margin: 60px auto;
+}
+
+.content p {
+  margin: 0;
+  padding: 0;
 }
