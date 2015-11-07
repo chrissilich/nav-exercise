@@ -5,7 +5,11 @@ var api = require('./api');
 var app = express();
 
 app.use(logger('dev'));
+
+// serving from public dir
 app.use(express.static(path.join(__dirname, 'public')));
+
+// loads api/index.js
 app.use('/api', api);
 
 module.exports = app;

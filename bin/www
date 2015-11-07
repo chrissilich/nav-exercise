@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+
+// loads app.js
 var app = require('../app');
 var port = process.env.PORT || 3000;
 
@@ -7,3 +9,5 @@ app.set('port', port);
 app.listen(port, function() {
   console.log('HUGE NavExercise application is available at http://localhost:' + port);
 });
+
+// this is THE server that runs on npm start and loads app.js
