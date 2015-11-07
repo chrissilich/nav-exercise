@@ -37,17 +37,33 @@ console.log("nav.js");
         // make an li  // make <a>
         var li = document.createElement('li');
         var a  = document.createElement('a');
-
-
         myNav.appendChild(li);
         li.appendChild(a);
-
+         // populate text and url
         a.innerHTML = navItemList[i].label;
+        a.setAttribute('href', navItemList[i].url);
+
+        var subNavItemList = navItemList[i].items;
+        if (subNavItemList.length > 0) {
+          // create ul
+          // append to originial li
+
+          for (var z = 0; z < subNavItemList.length; z++) {
+            // make an li  // make <a>
+            var subLi = document.createElement('li');
+            var subA  = document.createElement('a');
+
+            ul.appendChild(subLi);
+            subLi.appendChild(subA);
+             // populate text and url
+            subA.innerHTML = subNavItemList[z].label;
+            subA.setAttribute('href', subNavItemList[z].url);
+          }
+        }
 
 
 
 
-        // populate text and url
         // if statement for items is > [0] loop through array
           // for each through the array to make sub li and a
       };
