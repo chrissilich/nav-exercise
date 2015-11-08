@@ -46,14 +46,16 @@ console.log("nav.js");
         var subNavItemList = navItemList[i].items;
         if (subNavItemList.length > 0) {
           // create ul
+          var subUl = document.createElement('ul');
           // append to originial li
+          li.appendChild(subUl);
 
           for (var z = 0; z < subNavItemList.length; z++) {
             // make an li  // make <a>
             var subLi = document.createElement('li');
             var subA  = document.createElement('a');
 
-            ul.appendChild(subLi);
+            subUl.appendChild(subLi);
             subLi.appendChild(subA);
              // populate text and url
             subA.innerHTML = subNavItemList[z].label;
