@@ -28,30 +28,57 @@ nav {
 
 }*/
 
-ul {
+nav > ul {
   margin: 0;
   padding: 0;
-  margin-left: 134px;
+  padding-left: 134px;
 }
 
-/*ul li {
+nav > ul > li {
   display: inline-block;
   list-style: none;
   height: 72px;
   padding: 0 12px;
 }
 
-ul li:hover {
+
+nav > ul > li > a {
+  display: block;
+  font-size: 1em;
+  padding-top: 31px;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  height: 41px;
+}
+
+nav > ul > li > a:hover {
   background: white;
   color: #ec008c;
   cursor: pointer;
 }
 
-ul li a {
+nav > ul > li > ul {
+  position: absolute;
+  background: white;
+  z-index: 9999;
+  top: 72px;
+}
+
+nav > ul > li > ul > li {
   display: block;
-  font-size: 1em;
-  margin-top: 31px;
-}*/
+  list-style: none;
+}
+
+nav > ul > li > ul > li > a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Galaxie';
+}
+
+nav > ul > li > ul > li > a:hover {
+  color: #ec008c;
+}
 
 .office-bg {
   background-image: url(../images/background-image.jpg);

@@ -8,8 +8,7 @@ var AJAX = {};
 
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function(){
-      // httpRequest.open("GET", 'api/nav.json', true);
-      // httpRequest.send();
+
 
       if(httpRequest.readystate == XMLHttpRequest.DONE){
         if(httpRequest.status == 200){
@@ -23,6 +22,8 @@ var AJAX = {};
           callback(theError, null);
         }
       }
+      // httpRequest.open("GET", 'api/nav.json', true);
+      // httpRequest.send();
     }
   }
 

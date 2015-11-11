@@ -47,6 +47,7 @@ console.log("nav.js");
         if (subNavItemList.length > 0) {
           // create ul
           var subUl = document.createElement('ul');
+          subUl.setAttribute('class', navItemList[i].label)
           // append to originial li
           li.appendChild(subUl);
 
