@@ -1,6 +1,8 @@
 @import "fonts.css";
 
-
+* {
+  box-sizing: border-box;
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -20,8 +22,10 @@ nav {
 
 .veggie-burger{
   position: absolute;
-  top: 20px
-  left: 24px;
+  top: 0px;
+  height: 60px;
+  width: 60px;
+  left: 0;
 }
 
 .veggie{
@@ -54,20 +58,33 @@ nav {
   left: 0px;
 }
 
-/*.mobile-menu{
-  position: absolute;
-  background-color: black;
+#menu {
+  position: fixed;
+  top: 60px;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  z-index: 9999;
+  padding: 50px 30px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    -webkit-transition: all .3s ease-in;
+       -moz-transition: all .3s ease-in;
+         -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+  background-color: white;
+}
+
+.page-wrap {
+  height: 100%;
   width: 100%;
-  top:-100%;
-  transition:.3s;
-  z-index: 999;
-}
-*/
-#myNav {
-  display: none;
 }
 
-
+body.open .page-wrap {
+  margin-left: 280px;
+}
 
 .office-bg {
   background-image: url(../images/background-image.jpg);
@@ -105,8 +122,6 @@ nav {
   margin: 0;
   padding: 0;
 }
-
-
 
 @media screen and (min-width: 768px) {
 
