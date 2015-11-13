@@ -1,5 +1,6 @@
 @import "fonts.css";
 
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,88 +8,76 @@ html, body {
   font-family: 'HUGEAvantGardeBold', 'Galaxie', Sans-Serif;
 }
 
-.huge-logo {
-  background-image: url(../images/HUGE-white.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  height: 24px;
-  width: 60px;
-}
-
 header {
   background: #ec008c;
   overflow: hidden;
-  height: auto;
+  height: 60px;
 }
-/*
+
 nav {
-
-}*/
-
-nav > ul {
-  margin: 0;
-  padding: 0;
-  padding-left: 134px;
+  position: relative;
 }
 
-nav > ul > li {
-  display: inline-block;
-  list-style: none;
-  height: 72px;
-  padding: 0 12px;
-}
-
-
-nav > ul > li > a {
-  display: block;
-  font-size: 1em;
-  padding-top: 31px;
-  list-style: none;
-  text-decoration: none;
-  color: white;
-  height: 41px;
-}
-
-nav > ul > li > a:hover {
-  background: white;
-  color: #ec008c;
-  cursor: pointer;
-}
-
-nav > ul > li > ul {
+.veggie-burger{
   position: absolute;
+  top: 20px
+  left: 24px;
+}
+
+.veggie{
+  position: absolute;
+  width: 24px;
+  height: 5px;
   background: white;
-  z-index: 9999;
-  top: 72px;
+  top: 25px;
+  left: 24px;
+  margin: 2.5px 0;
 }
 
-nav > ul > li > ul > li {
-  display: block;
-  list-style: none;
+.veggie::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 5px;
+  background: white;
+  top: -8px;
+  left: 0px;
 }
 
-nav > ul > li > ul > li > a {
-  text-decoration: none;
-  color: black;
-  font-family: 'Galaxie';
+.veggie::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 5px;
+  background: white;
+  top: 8px;
+  left: 0px;
 }
 
-nav > ul > li > ul > li > a:hover {
-  color: #ec008c;
+/*.mobile-menu{
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  top:-100%;
+  transition:.3s;
+  z-index: 999;
 }
+*/
+#myNav {
+  display: none;
+}
+
+
 
 .office-bg {
   background-image: url(../images/background-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 640px;
+  height: 240px;
 }
 
-h1 {
+.mobile-breakpoint h1 {
   position: absolute;
   width: 60%;
   top: 45%;
@@ -99,6 +88,10 @@ h1 {
   font: 15vmin/1 HUGEAvantGardeBold;
   letter-spacing: -0.06em;
   text-align: center;
+}
+
+.desktop-breakpoint {
+  display: none;
 }
 
 .content {
@@ -112,3 +105,108 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+
+
+@media screen and (min-width: 768px) {
+
+  header {
+    height: 72px;
+  }
+
+  .veggie-burger{
+    display: none;
+  }
+
+  .huge-logo {
+  background-image: url(../images/HUGE-white.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  height: 24px;
+  width: 60px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav > ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 134px;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    height: 72px;
+    padding: 0 12px;
+  }
+
+
+  nav > ul > li > a {
+    display: block;
+    font-size: 1em;
+    padding-top: 31px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    height: 41px;
+  }
+
+  nav > ul > li > a:hover {
+    background: white;
+    color: #ec008c;
+    cursor: pointer;
+  }
+
+  nav > ul > li > ul {
+    position: absolute;
+    background: white;
+    z-index: 9999;
+    top: 72px;
+  }
+
+  nav > ul > li > ul > li {
+    display: block;
+    list-style: none;
+  }
+
+  nav > ul > li > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Galaxie';
+  }
+
+  nav > ul > li > ul > li > a:hover {
+    color: #ec008c;
+  }
+
+  .office-bg {
+    height: 640px;
+  }
+
+  .desktop-breakpoint {
+    display: inline;
+    position: absolute;
+    width: 60%;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font: 15vmin/1 HUGEAvantGardeBold;
+    letter-spacing: -0.06em;
+    text-align: center;
+  }
+
+  .mobile-breakpoint {
+    display: none;
+  }
+
+
+}
+
