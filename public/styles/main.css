@@ -1,4 +1,16 @@
-@import url(fonts.css);
+@font-face {
+  font-family: 'HUGEAvantGardeBold';
+  src: url("/fonts/huge_agb_v5-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/huge_agb_v5-webfont.woff") format("woff"), url("/fonts/huge_agb_v5-webfont.ttf") format("truetype"), url("/fonts/huge_agb_v5-webfont.svg#svgFontName") format("svg"); }
+@font-face {
+  font-family: 'Galaxie';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/GalaxieCopernicus-Book.eot?#iefix") format("embedded-opentype"), url("/fonts/GalaxieCopernicus-Book.woff") format("woff"), url("/fonts/GalaxieCopernicus-Book.svg#svgFontName") format("svg"); }
+@font-face {
+  font-family: 'Galaxie';
+  font-style: italic;
+  font-weight: normal;
+  src: url("/fonts/GalaxieCopernicus-BookItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/GalaxieCopernicus-BookItalic.woff") format("woff"), url("/fonts/GalaxieCopernicus-BookItalic.svg#svgFontName") format("svg"); }
 * {
   box-sizing: border-box; }
 
@@ -6,176 +18,162 @@ html, body {
   margin: 0;
   padding: 0;
   color: #fff;
-  font-family: 'HUGEAvantGardeBold', 'Galaxie', Sans-Serif;
-  /*
-  nav {
-    position: relative;
-  }
-  */ }
+  font-family: 'HUGEAvantGardeBold', 'Galaxie', Sans-Serif; }
   html header, body header {
     background: #ec008c;
+    overflow: hidden;
     height: 60px; }
-  html .page-wrap, body .page-wrap {
-    height: 100%;
-    width: 100%; }
+    @media (min-width: 786px) {
+      html header, body header {
+        height: 72px; } }
+  html .sidebar-mobile-nav, body .sidebar-mobile-nav {
+    position: fixed;
+    top: 60px;
+    width: 250px;
+    padding: 12px;
+    background: white;
+    z-index: 0;
+    left: -250px;
+    height: auto; }
+    @media (min-width: 786px) {
+      html .sidebar-mobile-nav, body .sidebar-mobile-nav {
+        display: none; } }
   html .toggle, body .toggle {
     text-decoration: none;
     position: fixed;
     z-index: 1;
     top: 0; }
-  html .page-content, body .page-content {
-    position: relative;
-    z-index: 0; }
-  html .huge-logo, body .huge-logo {
-    background-image: url(../images/HUGE-white.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    height: 24px;
-    width: 60px; }
-  html .sidebar, body .sidebar {
-    position: fixed;
-    top: 60px;
-    left: -250px;
-    width: 250px;
-    padding: 12px;
-    background: white;
-    z-index: 0; }
-    html .sidebar li, body .sidebar li {
-      font-family: 'Galaxie';
-      text-decoration: none;
-      list-style: none;
-      cursor: pointer; }
-      html .sidebar li a, body .sidebar li a {
-        text-decoration: none;
-        color: black; }
-        html .sidebar li a:hover, body .sidebar li a:hover {
-          color: #ec008c; }
-  html #sidebartoggler, body #sidebartoggler {
-    display: none; }
-    html #sidebartoggler:checked + .page-wrap .sidebar, body #sidebartoggler:checked + .page-wrap .sidebar {
-      left: 0; }
-    html #sidebartoggler:checked + .page-wrap .toggle, body #sidebartoggler:checked + .page-wrap .toggle {
-      right: 70px; }
-    html #sidebartoggler:checked + .page-wrap .page-content, body #sidebartoggler:checked + .page-wrap .page-content {
-      margin-left: 250px; }
-    html #sidebartoggler:checked + .page-wrap .huge-logo, body #sidebartoggler:checked + .page-wrap .huge-logo {
-      display: visible; }
-  html .veggie, body .veggie {
+  html .veggie-stack, body .veggie-stack {
     position: absolute;
     width: 24px;
     height: 5px;
     background: white;
     top: 25px;
     left: 24px;
-    margin: 2.5px 0; }
-    @media screen and (min-width: 768px) {
-      html .veggie, body .veggie {
+    margin: 2.5px 0;
+    cursor: pointer; }
+    @media (min-width: 786px) {
+      html .veggie-stack, body .veggie-stack {
         display: none; } }
-  html .veggie::before, body .veggie::before {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 5px;
-    background: white;
-    top: -8px;
-    left: 0px; }
-  html .veggie::after, body .veggie::after {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 5px;
-    background: white;
-    top: 8px;
-    left: 0px; }
-  html .office-bg, body .office-bg {
-    background-image: url(../images/background-image.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 240px; }
-  html .mobile-breakpoint h1, body .mobile-breakpoint h1 {
-    position: absolute;
-    width: 60%;
-    top: 45%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin: 0;
-    font: 15vmin/1 HUGEAvantGardeBold;
-    letter-spacing: -0.06em;
-    text-align: center; }
-  html .desktop-breakpoint, body .desktop-breakpoint {
-    display: none; }
-  html .content, body .content {
-    width: 70%;
-    color: black;
-    font-family: 'Galaxie', Sans-Serif;
-    margin: 60px auto; }
-  html .content p, body .content p {
-    margin: 0;
-    padding: 0; }
-  @media screen and (min-width: 768px) {
-    html header, body header {
-      height: 72px; }
-    html .veggie-burger, body .veggie-burger {
-      display: none; }
+    html .veggie-stack:before, body .veggie-stack:before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 5px;
+      background: white;
+      top: -8px;
+      left: 0px; }
+    html .veggie-stack:after, body .veggie-stack:after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 5px;
+      background: white;
+      top: 8px;
+      left: 0px; }
+  @media (min-width: 786px) {
     html nav > ul, body nav > ul {
-      margin: 0;
-      padding: 0;
-      padding-left: 134px; }
-    html nav > ul > li, body nav > ul > li {
-      display: inline-block;
-      list-style: none;
-      height: 72px;
-      padding: 0 12px; }
+      padding-left: 134px; } }
+  html nav > ul > li, body nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 0;
+    font-family: 'Galaxie';
+    text-decoration: none;
+    cursor: pointer; }
+    html nav > ul > li:hover, body nav > ul > li:hover {
+      background: white;
+      color: #fff;
+      cursor: pointer; }
     html nav > ul > li > a, body nav > ul > li > a {
       display: block;
       font-size: 1em;
-      padding-top: 31px;
+      padding: 31px 24px 0 24px;
       list-style: none;
       text-decoration: none;
       color: white;
-      height: 41px; }
+      height: 72px;
+      text-decoration: none;
+      color: black; }
       html nav > ul > li > a:hover, body nav > ul > li > a:hover {
-        background: white;
-        color: #ec008c;
-        cursor: pointer; }
-    html .About, html .Careers, html .Ideas, html .Contact, body .About, body .Careers, body .Ideas, body .Contact {
+        background: rgba(0, 0, 0, 0.5);
+        font-family: 'Galaxie';
+        color: #ec008c; }
+    html nav > ul > li > ul, body nav > ul > li > ul {
       position: absolute;
       background: white;
       z-index: 9999;
       top: 72px;
       overflow: hidden;
       max-height: 0; }
-      html .About > li, html .Careers > li, html .Ideas > li, html .Contact > li, body .About > li, body .Careers > li, body .Ideas > li, body .Contact > li {
+      html nav > ul > li > ul:focus ~ li, body nav > ul > li > ul:focus ~ li {
+        max-height: 400px; }
+      html nav > ul > li > ul > li, body nav > ul > li > ul > li {
         display: block;
+        list-style: none;
         padding: 5px 5px;
         margin: 0; }
-    html nav > ul > li > ul > li, body nav > ul > li > ul > li {
-      display: block;
-      list-style: none; }
-    html nav > ul > li > ul > li > a, body nav > ul > li > ul > li > a {
-      text-decoration: none;
-      color: black;
-      font-family: 'Galaxie'; }
-    html nav > ul > li > ul > li > a:hover, body nav > ul > li > ul > li > a:hover {
-      color: #ec008c; }
-    html .office-bg, body .office-bg {
-      height: 640px; }
-    html .desktop-breakpoint, body .desktop-breakpoint {
-      display: inline;
+  html #toggle-the-sidebar, body #toggle-the-sidebar {
+    display: none; }
+    html #toggle-the-sidebar:checked + .page-wrap .sidebar-mobile-nav, body #toggle-the-sidebar:checked + .page-wrap .sidebar-mobile-nav {
+      left: 0; }
+    html #toggle-the-sidebar:checked + .page-wrap .toggle, body #toggle-the-sidebar:checked + .page-wrap .toggle {
+      right: 70px; }
+    html #toggle-the-sidebar:checked + .page-wrap .page-content, body #toggle-the-sidebar:checked + .page-wrap .page-content {
+      left: 250px; }
+    html #toggle-the-sidebar:checked + .page-wrap .huge-logo, body #toggle-the-sidebar:checked + .page-wrap .huge-logo {
+      display: inline; }
+  html .page-wrap, body .page-wrap {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; }
+    html .page-wrap .huge-logo, body .page-wrap .huge-logo {
+      display: none;
+      background-image: url(../images/HUGE-white.png);
+      background-size: cover;
+      background-repeat: no-repeat;
       position: absolute;
-      width: 60%;
-      top: 45%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      margin: 0;
-      font: 15vmin/1 HUGEAvantGardeBold;
-      letter-spacing: -0.06em;
-      text-align: center; }
-    html .mobile-breakpoint, body .mobile-breakpoint {
-      display: none; } }
+      top: 18px; }
+      @media (min-width: 786px) {
+        html .page-wrap .huge-logo, body .page-wrap .huge-logo {
+          display: inline;
+          top: 24px;
+          left: 24px;
+          height: 24px;
+          width: 60px; } }
+    html .page-wrap .page-content, body .page-wrap .page-content {
+      position: relative;
+      z-index: 0;
+      overflow: hidden; }
+      html .page-wrap .page-content .office-bg, body .page-wrap .page-content .office-bg {
+        background-image: url(../images/background-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 240px; }
+        @media (min-width: 786px) {
+          html .page-wrap .page-content .office-bg, body .page-wrap .page-content .office-bg {
+            height: 640px; } }
+      @media (max-width: 786px) {
+        html .page-wrap .page-content .desktop-h1, body .page-wrap .page-content .desktop-h1 {
+          display: none; } }
+      @media (min-width: 786px) {
+        html .page-wrap .page-content .desktop-h1, body .page-wrap .page-content .desktop-h1 {
+          position: absolute;
+          width: 60%;
+          top: 45%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          margin: 0;
+          font: 15vmin/1 HUGEAvantGardeBold;
+          letter-spacing: -0.06em;
+          text-align: center; } }
+      html .page-wrap .page-content .content, body .page-wrap .page-content .content {
+        width: 70%;
+        color: black;
+        font-family: 'Galaxie', Sans-Serif;
+        margin: 60px auto; }
+        @media (min-width: 786px) {
+          html .page-wrap .page-content .content .mobile-h1, body .page-wrap .page-content .content .mobile-h1 {
+            display: none; } }

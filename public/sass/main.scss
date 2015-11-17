@@ -1,0 +1,239 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'HUGEAvantGardeBold', 'Galaxie', Sans-Serif;
+
+  header {
+   background: $magenta;
+   overflow: hidden;
+   height: 60px;
+   @include desktop {
+     height: 72px;
+   }
+  }
+
+  .sidebar-mobile-nav{
+    position: fixed;
+    top: 60px;
+    width: 250px;
+    padding: 12px;
+    background: white;
+    z-index: 0;
+    left: -250px;
+    height: auto;
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .toggle {
+    text-decoration: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+  }
+  .veggie-stack{
+    position: absolute;
+    width: 24px;
+    height: 5px;
+    background: white;
+    top: 25px;
+    left: 24px;
+    margin: 2.5px 0;
+    cursor: pointer;
+    @include desktop {
+      display: none;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 5px;
+      background: white;
+      top: -8px;
+      left: 0px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 5px;
+      background: white;
+      top: 8px;
+      left: 0px;
+    }
+  }
+
+  nav > ul {
+
+    // entire nav menu
+    @include desktop {
+      padding-left: 134px;
+    }
+
+    >li {
+      // first level styles
+      display: inline-block;
+      list-style: none;
+      padding: 0 0;
+      font-family: 'Galaxie';
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        background: white;
+        color: $white;
+        cursor: pointer;
+      }
+
+      >a {
+        // clickable link for 1st level nav
+        display: block;
+        font-size: 1em;
+        padding: 31px 24px 0 24px;
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        height: 72px;
+        text-decoration: none;
+        color: black;
+        &:hover {
+          background: $translucent_black;
+          font-family: 'Galaxie';
+          color: $magenta;
+        }
+      }
+
+      > ul {
+        // submenu for 2nd level nav
+        position: absolute;
+        background: white;
+        z-index: 9999;
+        top: 72px;
+        overflow: hidden;
+        max-height: 0;
+        &:focus ~ li {
+          max-height: 400px;
+        }
+        > li {
+          // 2nd level nav items
+          display: block;
+          list-style: none;
+          padding: 5px 5px;
+          margin: 0;
+
+          > a {
+            // clickable link for 2nd nav items
+
+          }
+        }
+      }
+    }
+  }
+
+  .About, .Careers, .Ideas, .Contact {
+
+  }
+  #toggle-the-sidebar {
+    display: none;
+    &:checked + .page-wrap {
+      .sidebar-mobile-nav {
+        left: 0;
+      }
+      .toggle {
+        right: 70px;
+      }
+      .page-content {
+        left: 250px;
+      }
+      .huge-logo {
+        display: inline;
+      }
+    }
+  }
+
+  .page-wrap {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .huge-logo {
+      display: none;
+      background-image: url(../images/HUGE-white.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 18px;
+      @include desktop {
+        display: inline;
+        top: 24px;
+        left: 24px;
+        height: 24px;
+        width: 60px;
+      }
+    }
+
+    .page-content {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+
+      .office-bg {
+        background-image: url(../images/background-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 240px;
+        @include desktop {
+          height: 640px;
+        }
+      }
+
+      .desktop-h1 {
+        @include mobile {
+          display: none
+        }
+        @include desktop {
+          position: absolute;
+          width: 60%;
+          top: 45%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          margin: 0;
+          font: 15vmin/1 HUGEAvantGardeBold;
+          letter-spacing: -0.06em;
+          text-align: center;
+        }
+      }
+
+
+      .content {
+        width: 70%;
+        color: black;
+        font-family: 'Galaxie', Sans-Serif;
+        margin: 60px auto;
+        .mobile-h1 {
+          @include desktop {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
