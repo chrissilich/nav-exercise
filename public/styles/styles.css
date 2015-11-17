@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'HUGEAvantGardeBold';
+  src: url("/fonts/huge_agb_v5-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/huge_agb_v5-webfont.woff") format("woff"), url("/fonts/huge_agb_v5-webfont.ttf") format("truetype"), url("/fonts/huge_agb_v5-webfont.svg#svgFontName") format("svg"); }
+@font-face {
+  font-family: 'Galaxie';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/GalaxieCopernicus-Book.eot?#iefix") format("embedded-opentype"), url("/fonts/GalaxieCopernicus-Book.woff") format("woff"), url("/fonts/GalaxieCopernicus-Book.svg#svgFontName") format("svg"); }
+@font-face {
+  font-family: 'Galaxie';
+  font-style: italic;
+  font-weight: normal;
+  src: url("/fonts/GalaxieCopernicus-BookItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/GalaxieCopernicus-BookItalic.woff") format("woff"), url("/fonts/GalaxieCopernicus-BookItalic.svg#svgFontName") format("svg"); }
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'HUGEAvantGardeBold', 'Galaxie', Sans-Serif; }
+  html nav, body nav {
+    background: #ec008c;
+    overflow: hidden;
+    height: 60px; }
+    @media (min-width: 786px) {
+      html nav, body nav {
+        height: 72px; } }
+  html ul, body ul {
+    margin: 0;
+    padding: 0; }
+    @media (min-width: 786px) {
+      html ul, body ul {
+        padding-left: 134px; } }
+    @media (min-width: 786px) {
+      html ul > li, body ul > li {
+        display: inline-block;
+        list-style: none;
+        padding: 0 0; } }
+    html ul > li > a, body ul > li > a {
+      display: block;
+      font-size: 1em;
+      padding: 31px 24px;
+      list-style: none;
+      text-decoration: none;
+      color: white;
+      height: 72px; }
+      html ul > li > a:hover, body ul > li > a:hover {
+        background: white;
+        color: #fff;
+        cursor: pointer; }
+    html ul > li > ul > li, body ul > li > ul > li {
+      display: block;
+      list-style: none; }
+      html ul > li > ul > li > a, body ul > li > ul > li > a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.5);
+        font-family: 'Galaxie'; }
+        html ul > li > ul > li > a:hover, body ul > li > ul > li > a:hover {
+          color: #ec008c; }
+  @media (min-width: 786px) {
+    html .About, html .Careers, html .Ideas, html .Contact, body .About, body .Careers, body .Ideas, body .Contact {
+      position: absolute;
+      background: white;
+      z-index: 9999;
+      top: 72px;
+      overflow: hidden;
+      max-height: 0; }
+      html .About > li, html .Careers > li, html .Ideas > li, html .Contact > li, body .About > li, body .Careers > li, body .Ideas > li, body .Contact > li {
+        display: block;
+        padding: 5px 5px;
+        margin: 0; } }
+  html #sidebartoggler, body #sidebartoggler {
+    display: none; }
+    html #sidebartoggler:checked + .page-wrap .mobile__nav, body #sidebartoggler:checked + .page-wrap .mobile__nav {
+      left: 0; }
+    html #sidebartoggler:checked + .page-wrap .toggle, body #sidebartoggler:checked + .page-wrap .toggle {
+      right: 70px; }
+    html #sidebartoggler:checked + .page-wrap .page-content, body #sidebartoggler:checked + .page-wrap .page-content {
+      margin-left: 250px; }
+  html .page-wrap, body .page-wrap {
+    height: 100%;
+    width: 100%; }
+    html .page-wrap .huge-logo, body .page-wrap .huge-logo {
+      background-image: url(../images/HUGE-white.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      height: 24px;
+      width: 60px; }
+    html .page-wrap .toggle, body .page-wrap .toggle {
+      text-decoration: none;
+      position: fixed;
+      z-index: 1;
+      top: 0; }
+    html .page-wrap .veggie, body .page-wrap .veggie {
+      position: absolute;
+      width: 24px;
+      height: 5px;
+      background: white;
+      top: 25px;
+      left: 24px;
+      margin: 2.5px 0; }
+      @media (min-width: 786px) {
+        html .page-wrap .veggie, body .page-wrap .veggie {
+          display: none; } }
+      html .page-wrap .veggie:before, body .page-wrap .veggie:before {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 5px;
+        background: white;
+        top: -8px;
+        left: 0px; }
+      html .page-wrap .veggie:after, body .page-wrap .veggie:after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 5px;
+        background: white;
+        top: 8px;
+        left: 0px; }
+    html .page-wrap .page-content, body .page-wrap .page-content {
+      position: relative;
+      z-index: 0;
+      top: 60px; }
+      html .page-wrap .page-content .office-bg, body .page-wrap .page-content .office-bg {
+        background-image: url(../images/background-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 240px; }
+        @media (min-width: 786px) {
+          html .page-wrap .page-content .office-bg, body .page-wrap .page-content .office-bg {
+            height: 640px; } }
+      html .page-wrap .page-content .mobile-breakpoint h1, body .page-wrap .page-content .mobile-breakpoint h1 {
+        position: absolute;
+        width: 60%;
+        top: 45%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        margin: 0;
+        font: 15vmin/1 HUGEAvantGardeBold;
+        letter-spacing: -0.06em;
+        text-align: center; }
+      html .page-wrap .page-content .desktop-breakpoint, body .page-wrap .page-content .desktop-breakpoint {
+        display: none; }
+      html .page-wrap .page-content .content, body .page-wrap .page-content .content {
+        width: 70%;
+        color: black;
+        font-family: 'Galaxie', Sans-Serif;
+        margin: 60px auto; }
+      html .page-wrap .page-content .content p, body .page-wrap .page-content .content p {
+        margin: 0;
+        padding: 0; }
+      html .page-wrap .page-content .desktop-breakpoint, body .page-wrap .page-content .desktop-breakpoint {
+        display: none; }
+        @media (min-width: 786px) {
+          html .page-wrap .page-content .desktop-breakpoint, body .page-wrap .page-content .desktop-breakpoint {
+            display: inline;
+            position: absolute;
+            width: 60%;
+            top: 45%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            margin: 0;
+            font: 15vmin/1 HUGEAvantGardeBold;
+            letter-spacing: -0.06em;
+            text-align: center; } }

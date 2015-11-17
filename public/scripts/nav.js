@@ -75,6 +75,8 @@ console.log("nav.js");
     navJSON.open("GET", "/api/nav.json", true);
     navJSON.send();
     console.log("complete");
+
+
 })();
 
 // when that succeeds, it should return a long string of JSON
