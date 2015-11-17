@@ -22,6 +22,11 @@ html, body {
    }
   }
 
+  .desktop-nav {
+    @include mobile {
+      display: none;
+    }
+  }
   .sidebar-mobile-nav{
     position: fixed;
     top: 60px;
@@ -42,6 +47,7 @@ html, body {
     z-index: 1;
     top: 0;
   }
+
   .veggie-stack{
     position: absolute;
     width: 24px;
@@ -54,6 +60,7 @@ html, body {
     @include desktop {
       display: none;
     }
+
     &:before {
       content: "";
       position: absolute;
@@ -75,7 +82,7 @@ html, body {
   }
 
   nav > ul {
-
+    margin: 0;
     // entire nav menu
     @include desktop {
       padding-left: 134px;
@@ -85,15 +92,10 @@ html, body {
       // first level styles
       display: inline-block;
       list-style: none;
-      padding: 0 0;
-      font-family: 'Galaxie';
+
+      font-family: 'HUGEAvantGardeBold';
       text-decoration: none;
       cursor: pointer;
-      &:hover {
-        background: white;
-        color: $white;
-        cursor: pointer;
-      }
 
       >a {
         // clickable link for 1st level nav
@@ -102,47 +104,52 @@ html, body {
         padding: 31px 24px 0 24px;
         list-style: none;
         text-decoration: none;
-        color: white;
+        color: black;
         height: 72px;
         text-decoration: none;
-        color: black;
+        @include desktop {
+          color: white;
+        }
         &:hover {
-          background: $translucent_black;
-          font-family: 'Galaxie';
+          background: $white;
           color: $magenta;
         }
       }
 
       > ul {
+        margin: 0;
+        padding: 0;
         // submenu for 2nd level nav
         position: absolute;
         background: white;
         z-index: 9999;
         top: 72px;
         overflow: hidden;
-        max-height: 0;
-        &:focus ~ li {
-          max-height: 400px;
-        }
+        max-height: 100%;
+
         > li {
           // 2nd level nav items
           display: block;
           list-style: none;
-          padding: 5px 5px;
           margin: 0;
 
           > a {
             // clickable link for 2nd nav items
+            color: black;
+            padding: 24px 24px;
+            font-family: 'Galaxie';
 
+            text-decoration: none;
+            &:hover {
+              color: $magenta;
+              background: $translucent_black;
+            }
           }
         }
       }
     }
   }
 
-  .About, .Careers, .Ideas, .Contact {
-
-  }
   #toggle-the-sidebar {
     display: none;
     &:checked + .page-wrap {
@@ -154,6 +161,7 @@ html, body {
       }
       .page-content {
         left: 250px;
+
       }
       .huge-logo {
         display: inline;
