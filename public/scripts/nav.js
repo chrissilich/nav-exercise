@@ -20,7 +20,8 @@ console.log("nav.js");
           if(navJSON.status == 200){
               console.log(navJSON.responseText);
               data = JSON.parse(navJSON.responseText);
-              buildNav();
+              buildNav(".desktop-nav");
+              buildNav(".sidebar-mobile-nav");
               console.log(data);
           }
           else {
@@ -29,8 +30,8 @@ console.log("nav.js");
         }
     }
 
-    var buildNav = function() {
-      var myNav = document.getElementById("myNav");
+    var buildNav = function(selector) {
+      var myNav = document.querySelector(selector);
       var navItemList = data.items;
 
       for (var i = 0; i < navItemList.length; i++) {
