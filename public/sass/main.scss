@@ -15,12 +15,11 @@ html, body {
 
   header {
     position: relative;
-   background: $magenta;
-   overflow: hidden;
-   height: 60px;
-   @include desktop {
-     height: 72px;
-   }
+    background: $magenta;
+    height: 60px;
+    @include desktop {
+      height: 72px;
+    }
   }
 
   .desktop-nav {
@@ -36,7 +35,7 @@ html, body {
     padding: 0;
     padding-top: 12px;
     margin: 0;
-    background: white;
+    background: $white;
     z-index: 0;
     left: -250px;
     height: auto;
@@ -140,7 +139,7 @@ html, body {
     position: absolute;
     width: 24px;
     height: 5px;
-    background: white;
+    background: $white;
     top: 25px;
     left: 24px;
     margin: 2.5px 0;
@@ -155,7 +154,7 @@ html, body {
       position: absolute;
       width: 24px;
       height: 5px;
-      background: white;
+      background: $white;
       top: -8px;
       left: 0px;
     }
@@ -164,7 +163,7 @@ html, body {
       position: absolute;
       width: 24px;
       height: 5px;
-      background: white;
+      background: $white;
       top: 8px;
       left: 0px;
       opacity: 1;
@@ -173,13 +172,11 @@ html, body {
 
   nav > ul {
     margin: 0;
-    // entire nav menu
     @include desktop {
       padding-left: 134px;
     }
 
     >li {
-      // first level styles
       display: inline-block;
       list-style: none;
       font-family: 'HUGEAvantGardeBold';
@@ -193,7 +190,6 @@ html, body {
       }
 
       > a {
-        // clickable link for 1st level nav
         display: block;
         font-size: 1em;
         padding: 31px 24px 0 24px;
@@ -202,7 +198,7 @@ html, body {
         color: black;
         height: 72px;
         @include desktop {
-          color: white;
+          color: $white;
         }
       }
       &:hover {
@@ -212,30 +208,26 @@ html, body {
       }
 
       > ul {
-        // submenu for 2nd level nav
         display: none;
-        margin: 0;
-        padding: 0;
+        padding: 12px 0;
         position: absolute;
-        background: white;
+        background: $white;
         z-index: 9999;
         top: 72px;
         overflow: hidden;
-        max-height: 100%;
+        max-height: auto;
 
         > li {
-          // 2nd level nav items
           display: block;
           list-style: none;
           margin: 0;
 
           > a {
-            // clickable link for 2nd nav items
             color: black;
-            padding: 0 24px;
             font-family: 'Galaxie';
             display: block;
-
+            font-size: 14px;
+            padding: 12px 24px;
             text-decoration: none;
             &:hover {
               color: $magenta;
@@ -382,6 +374,7 @@ html, body {
   line-height: 48px;
   color: black;
   @include desktop {
+    font-size: 12px;
     padding-left: 10%;
   }
 }
