@@ -12,11 +12,11 @@
     navJSON.onreadystatechange = function() {
         if (navJSON.readyState == XMLHttpRequest.DONE ) {
           if(navJSON.status == 200){
-              console.log(navJSON.responseText);
+
               data = JSON.parse(navJSON.responseText);
               buildNav(".desktop-nav");
               buildNav(".sidebar-mobile-nav");
-              console.log(data);
+
           }
           else {
             alert('there was an error and here is what the server said:' + httpRequest.status);
@@ -67,5 +67,5 @@
     };
     navJSON.open("GET", "/api/nav.json", true);
     navJSON.send();
-    console.log("complete");
+
 })();
