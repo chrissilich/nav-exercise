@@ -1,7 +1,3 @@
-console.log("nav.js");
-
-// ajax request for "/api/nav.json"
-
 (function() {
 
     var navJSON;
@@ -48,13 +44,17 @@ console.log("nav.js");
         if (subNavItemList.length > 0) {
           // create ul
           var subUl = document.createElement('ul');
+          var dropArrow = document.createElement('div');
           subUl.setAttribute('class', navItemList[i].label)
           // append to originial li
           li.appendChild(subUl);
+          li.appendChild(dropArrow);
+          dropArrow.setAttribute('class', 'drop-arrow');
 
           for (var z = 0; z < subNavItemList.length; z++) {
             // make an li  // make <a>
             var subLi = document.createElement('li');
+
             var subA  = document.createElement('a');
 
             subUl.appendChild(subLi);

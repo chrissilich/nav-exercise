@@ -27,11 +27,14 @@ html, body {
       display: none;
     }
   }
+
   .sidebar-mobile-nav{
     position: absolute;
     top: 60px;
     width: 250px;
-    padding: 12px;
+    padding: 0;
+    padding-top: 12px;
+    margin: 0;
     background: white;
     z-index: 0;
     left: -250px;
@@ -39,6 +42,71 @@ html, body {
     @include desktop {
       display: none;
     }
+    > li {
+      list-style: none;
+      position: relative;
+      > a {
+        font-size: 16px;
+        font-family: 'HUGEAvantGardeBold';
+        text-decoration: none;
+        color: black;
+        padding: 12px 24px;
+        display: block;
+        text-decoration: none;
+        &:hover {
+          color: $magenta;
+          background: $light_gray;
+        }
+      }
+      &:hover {
+        > ul {
+          display: block;
+        }
+        .drop-arrow {
+          transform: rotate(225deg);
+          top: 10px;
+        }
+      }
+      > ul {
+        display: none;
+        padding: 0;
+        max-height: auto;
+        > li {
+          > a {
+            font-size: 14px;
+            color: black;
+            padding: 12px 24px;
+            font-family: 'Galaxie';
+            display: block;
+            text-decoration: none;
+            &:hover {
+              color: $magenta;
+              background: $light_gray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .drop-arrow, .drop-arrow:after {
+    background: $magenta;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: 24px;
+    right: 10%;
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+
+  }
+  .drop-arrow:after {
+    content: "";
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    top: 0;
+    right: 2px;
+
   }
 
   .toggle {
@@ -106,7 +174,7 @@ html, body {
         }
       }
 
-      >a {
+      > a {
         // clickable link for 1st level nav
         display: block;
         font-size: 1em;
@@ -155,7 +223,7 @@ html, body {
             text-decoration: none;
             &:hover {
               color: $magenta;
-              background: $translucent_black;
+              background: $light_gray;
             }
           }
         }
@@ -179,7 +247,8 @@ html, body {
       .huge-logo {
         display: inline;
       }
-      // code to make veggie stack look like an x here
+      // code to make veggie stack look like an x
+      // code to add overlay over page content on slideout
     }
   }
 

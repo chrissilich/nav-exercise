@@ -33,7 +33,9 @@ html, body {
     position: absolute;
     top: 60px;
     width: 250px;
-    padding: 12px;
+    padding: 0;
+    padding-top: 12px;
+    margin: 0;
     background: white;
     z-index: 0;
     left: -250px;
@@ -41,6 +43,54 @@ html, body {
     @media (min-width: 786px) {
       html .sidebar-mobile-nav, body .sidebar-mobile-nav {
         display: none; } }
+    html .sidebar-mobile-nav > li, body .sidebar-mobile-nav > li {
+      list-style: none;
+      position: relative; }
+      html .sidebar-mobile-nav > li > a, body .sidebar-mobile-nav > li > a {
+        font-size: 16px;
+        font-family: 'HUGEAvantGardeBold';
+        text-decoration: none;
+        color: black;
+        padding: 12px 24px;
+        display: block;
+        text-decoration: none; }
+        html .sidebar-mobile-nav > li > a:hover, body .sidebar-mobile-nav > li > a:hover {
+          color: #ec008c;
+          background: #eee; }
+      html .sidebar-mobile-nav > li:hover > ul, body .sidebar-mobile-nav > li:hover > ul {
+        display: block; }
+      html .sidebar-mobile-nav > li:hover .drop-arrow, body .sidebar-mobile-nav > li:hover .drop-arrow {
+        transform: rotate(225deg);
+        top: 10px; }
+      html .sidebar-mobile-nav > li > ul, body .sidebar-mobile-nav > li > ul {
+        display: none;
+        padding: 0;
+        max-height: auto; }
+        html .sidebar-mobile-nav > li > ul > li > a, body .sidebar-mobile-nav > li > ul > li > a {
+          font-size: 14px;
+          color: black;
+          padding: 12px 24px;
+          font-family: 'Galaxie';
+          display: block;
+          text-decoration: none; }
+          html .sidebar-mobile-nav > li > ul > li > a:hover, body .sidebar-mobile-nav > li > ul > li > a:hover {
+            color: #ec008c;
+            background: #eee; }
+  html .drop-arrow, html .drop-arrow:after, body .drop-arrow, body .drop-arrow:after {
+    background: #ec008c;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: 24px;
+    right: 10%;
+    transform: rotate(45deg);
+    transform-origin: bottom right; }
+  html .drop-arrow:after, body .drop-arrow:after {
+    content: "";
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    top: 0;
+    right: 2px; }
   html .toggle, body .toggle {
     text-decoration: none;
     position: fixed;
@@ -126,7 +176,7 @@ html, body {
             text-decoration: none; }
             html nav > ul > li > ul > li > a:hover, body nav > ul > li > ul > li > a:hover {
               color: #ec008c;
-              background: rgba(0, 0, 0, 0.5); }
+              background: #eee; }
   html #toggle-the-sidebar, body #toggle-the-sidebar {
     display: none; }
     html #toggle-the-sidebar:checked + .page-wrap .sidebar-mobile-nav, body #toggle-the-sidebar:checked + .page-wrap .sidebar-mobile-nav {
