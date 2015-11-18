@@ -31,3 +31,4 @@ node_modules
 .lock-wscript
 
 public/sass/.sass-cache/
+public/config.codekit/
