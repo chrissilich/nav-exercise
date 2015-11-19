@@ -14,22 +14,22 @@
 * {
   box-sizing: border-box; }
 
-html, body {
+body {
   margin: 0;
   padding: 0;
   color: #fff;
   font-family: 'HUGEAvantGardeBold', 'Galaxie', Sans-Serif; }
-  html header, body header {
+  body header {
     position: relative;
     background: #ec008c;
     height: 60px; }
     @media (min-width: 786px) {
-      html header, body header {
+      body header {
         height: 72px; } }
   @media (max-width: 786px) {
-    html .desktop-nav, body .desktop-nav {
+    body .desktop-nav {
       display: none; } }
-  html .sidebar-mobile-nav, body .sidebar-mobile-nav {
+  body .sidebar-mobile-nav {
     position: absolute;
     top: 60px;
     width: 250px;
@@ -41,12 +41,12 @@ html, body {
     left: -250px;
     height: auto; }
     @media (min-width: 786px) {
-      html .sidebar-mobile-nav, body .sidebar-mobile-nav {
+      body .sidebar-mobile-nav {
         display: none; } }
-    html .sidebar-mobile-nav > li, body .sidebar-mobile-nav > li {
+    body .sidebar-mobile-nav > li {
       list-style: none;
       position: relative; }
-      html .sidebar-mobile-nav > li > a, body .sidebar-mobile-nav > li > a {
+      body .sidebar-mobile-nav > li > a {
         font-size: 16px;
         font-family: 'HUGEAvantGardeBold';
         text-decoration: none;
@@ -54,29 +54,29 @@ html, body {
         padding: 12px 24px;
         display: block;
         text-decoration: none; }
-        html .sidebar-mobile-nav > li > a:hover, body .sidebar-mobile-nav > li > a:hover {
+        body .sidebar-mobile-nav > li > a:hover {
           color: #ec008c;
           background: #eee; }
-      html .sidebar-mobile-nav > li:hover > ul, body .sidebar-mobile-nav > li:hover > ul {
+      body .sidebar-mobile-nav > li:hover > ul {
         display: block; }
-      html .sidebar-mobile-nav > li:hover .drop-arrow, body .sidebar-mobile-nav > li:hover .drop-arrow {
+      body .sidebar-mobile-nav > li:hover .drop-arrow {
         transform: rotate(225deg);
         top: 10px; }
-      html .sidebar-mobile-nav > li > ul, body .sidebar-mobile-nav > li > ul {
+      body .sidebar-mobile-nav > li > ul {
         display: none;
         padding: 0;
         max-height: auto; }
-        html .sidebar-mobile-nav > li > ul > li > a, body .sidebar-mobile-nav > li > ul > li > a {
+        body .sidebar-mobile-nav > li > ul > li > a {
           font-size: 14px;
           color: black;
           padding: 12px 24px;
           font-family: 'Galaxie';
           display: block;
           text-decoration: none; }
-          html .sidebar-mobile-nav > li > ul > li > a:hover, body .sidebar-mobile-nav > li > ul > li > a:hover {
+          body .sidebar-mobile-nav > li > ul > li > a:hover {
             color: #ec008c;
             background: #eee; }
-  html .drop-arrow, html .drop-arrow:after, body .drop-arrow, body .drop-arrow:after {
+  body .drop-arrow, body .drop-arrow:after {
     background: #ec008c;
     width: 10px;
     height: 2px;
@@ -86,15 +86,15 @@ html, body {
     transform: rotate(45deg);
     transform-origin: bottom right; }
     @media (min-width: 786px) {
-      html .drop-arrow, html .drop-arrow:after, body .drop-arrow, body .drop-arrow:after {
+      body .drop-arrow, body .drop-arrow:after {
         display: none; } }
-  html .drop-arrow:after, body .drop-arrow:after {
+  body .drop-arrow:after {
     content: "";
     transform: rotate(90deg);
     transform-origin: bottom right;
     top: 0;
     right: 2px; }
-  html .toggle, body .toggle {
+  body .toggle {
     text-decoration: none;
     position: fixed;
     z-index: 1;
@@ -102,7 +102,7 @@ html, body {
     width: 50px;
     height: 50px;
     cursor: pointer; }
-  html label:after, body label:after {
+  body label:after {
     content: "";
     position: fixed;
     top: 0;
@@ -112,9 +112,9 @@ html, body {
     width: 200%;
     z-index: 2; }
     @media (min-width: 786px) {
-      html label:after, body label:after {
+      body label:after {
         display: none; } }
-  html .veggie-stack, body .veggie-stack {
+  body .veggie-stack {
     position: absolute;
     width: 24px;
     height: 5px;
@@ -128,9 +128,9 @@ html, body {
     -moz-transition: .5s ease;
     transition: .5s ease; }
     @media (min-width: 786px) {
-      html .veggie-stack, body .veggie-stack {
+      body .veggie-stack {
         display: none; } }
-    html .veggie-stack:before, body .veggie-stack:before {
+    body .veggie-stack:before {
       content: "";
       position: absolute;
       width: 24px;
@@ -138,7 +138,7 @@ html, body {
       background: #fff;
       top: -8px;
       left: 0px; }
-    html .veggie-stack:after, body .veggie-stack:after {
+    body .veggie-stack:after {
       content: "";
       position: absolute;
       width: 24px;
@@ -147,21 +147,21 @@ html, body {
       top: 8px;
       left: 0px;
       opacity: 1; }
-  html nav > ul, body nav > ul {
+  body nav > ul {
     margin: 0; }
     @media (min-width: 786px) {
-      html nav > ul, body nav > ul {
+      body nav > ul {
         padding-left: 134px; } }
-    html nav > ul > li, body nav > ul > li {
+    body nav > ul > li {
       display: inline-block;
       list-style: none;
       font-family: 'HUGEAvantGardeBold';
       text-decoration: none;
       cursor: pointer; }
-      html nav > ul > li:hover > a, body nav > ul > li:hover > a {
+      body nav > ul > li:hover > a {
         background: #fff;
         color: #ec008c; }
-      html nav > ul > li > a, body nav > ul > li > a {
+      body nav > ul > li > a {
         display: block;
         font-size: 1em;
         padding: 31px 24px 0 24px;
@@ -170,11 +170,11 @@ html, body {
         color: black;
         height: 72px; }
         @media (min-width: 786px) {
-          html nav > ul > li > a, body nav > ul > li > a {
+          body nav > ul > li > a {
             color: #fff; } }
-      html nav > ul > li:hover > ul, body nav > ul > li:hover > ul {
+      body nav > ul > li:hover > ul {
         display: block; }
-      html nav > ul > li > ul, body nav > ul > li > ul {
+      body nav > ul > li > ul {
         display: none;
         padding: 12px 0;
         position: absolute;
@@ -183,64 +183,67 @@ html, body {
         top: 72px;
         overflow: hidden;
         max-height: auto; }
-        html nav > ul > li > ul > li, body nav > ul > li > ul > li {
+        body nav > ul > li > ul > li {
           display: block;
           list-style: none;
           margin: 0; }
-          html nav > ul > li > ul > li > a, body nav > ul > li > ul > li > a {
+          body nav > ul > li > ul > li > a {
             color: black;
             font-family: 'Galaxie';
             display: block;
             font-size: 14px;
             padding: 12px 24px;
             text-decoration: none; }
-            html nav > ul > li > ul > li > a:hover, body nav > ul > li > ul > li > a:hover {
+            body nav > ul > li > ul > li > a:hover {
               color: #ec008c;
               background: #eee; }
-  html #toggle-the-sidebar, body #toggle-the-sidebar {
+  body #toggle-the-sidebar {
     display: none; }
-    html #toggle-the-sidebar:checked + .page-wrap .sidebar-mobile-nav, body #toggle-the-sidebar:checked + .page-wrap .sidebar-mobile-nav {
+    body #toggle-the-sidebar:checked + .page-wrap .sidebar-mobile-nav {
       left: 0;
       transition: .5s ease;
       -webkit-transition: .5s ease;
       -moz-transition: .5s ease;
       transition: .5s ease; }
-    html #toggle-the-sidebar:checked + .page-wrap .toggle, body #toggle-the-sidebar:checked + .page-wrap .toggle {
+    body #toggle-the-sidebar:checked + .page-wrap .toggle {
       right: 5%;
       transition: .5s ease;
       -webkit-transition: .5s ease;
       -moz-transition: .5s ease;
       transition: .5s ease; }
-    html #toggle-the-sidebar:checked + .page-wrap .page-content, body #toggle-the-sidebar:checked + .page-wrap .page-content {
+    body #toggle-the-sidebar:checked + .page-wrap .page-content {
       left: 250px;
       transition: .5s ease;
       -webkit-transition: .5s ease;
       -moz-transition: .5s ease;
       transition: .5s ease; }
-    html #toggle-the-sidebar:checked + .page-wrap .huge-logo, body #toggle-the-sidebar:checked + .page-wrap .huge-logo {
+      @media (min-width: 786px) {
+        body #toggle-the-sidebar:checked + .page-wrap .page-content {
+          left: 0; } }
+    body #toggle-the-sidebar:checked + .page-wrap .huge-logo {
       left: 24px;
       position: fixed;
       transition: .5s ease;
       -webkit-transition: .5s ease;
       -moz-transition: .5s ease;
       transition: .5s ease; }
-    html #toggle-the-sidebar:checked + .page-wrap .veggie-stack, body #toggle-the-sidebar:checked + .page-wrap .veggie-stack {
+    body #toggle-the-sidebar:checked + .page-wrap .veggie-stack {
       transform: rotate(225deg);
       transform-origin: center;
       transition: .5s ease;
       -webkit-transition: .5s ease;
       -moz-transition: .5s ease;
       transition: .5s ease; }
-      html #toggle-the-sidebar:checked + .page-wrap .veggie-stack:before, body #toggle-the-sidebar:checked + .page-wrap .veggie-stack:before {
+      body #toggle-the-sidebar:checked + .page-wrap .veggie-stack:before {
         transform: rotate(90deg);
         top: 0; }
-      html #toggle-the-sidebar:checked + .page-wrap .veggie-stack:after, body #toggle-the-sidebar:checked + .page-wrap .veggie-stack:after {
+      body #toggle-the-sidebar:checked + .page-wrap .veggie-stack:after {
         opacity: 0; }
-  html .page-wrap, body .page-wrap {
+  body .page-wrap {
     height: 100%;
     width: 100%;
     overflow: hidden; }
-    html .page-wrap .huge-logo, body .page-wrap .huge-logo {
+    body .page-wrap .huge-logo {
       left: -50%;
       background-image: url(../images/HUGE-white.png);
       background-size: cover;
@@ -251,31 +254,31 @@ html, body {
       width: 60px;
       z-index: 3; }
       @media (min-width: 786px) {
-        html .page-wrap .huge-logo, body .page-wrap .huge-logo {
+        body .page-wrap .huge-logo {
           position: absolute;
           display: inline;
           top: 24px;
           left: 24px; } }
-    html .page-wrap .page-content, body .page-wrap .page-content {
+    body .page-wrap .page-content {
       position: relative;
       z-index: 0;
       overflow: hidden; }
-      html .page-wrap .page-content .office-bg, body .page-wrap .page-content .office-bg {
+      body .page-wrap .page-content .office-bg {
         background-image: url(../images/background-image.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
         height: 240px; }
         @media (min-width: 786px) {
-          html .page-wrap .page-content .office-bg, body .page-wrap .page-content .office-bg {
+          body .page-wrap .page-content .office-bg {
             height: 640px; } }
       @media (max-width: 786px) {
-        html .page-wrap .page-content .desktop-h1, body .page-wrap .page-content .desktop-h1 {
+        body .page-wrap .page-content .desktop-h1 {
           display: none; } }
       @media (min-width: 786px) {
-        html .page-wrap .page-content .desktop-h1, body .page-wrap .page-content .desktop-h1 {
+        body .page-wrap .page-content .desktop-h1 {
           position: absolute;
-          width: 60%;
+          width: 625px;
           top: 45%;
           left: 50%;
           -webkit-transform: translate(-50%, -50%);
@@ -284,32 +287,32 @@ html, body {
           font: 12vmin/1 HUGEAvantGardeBold;
           letter-spacing: -0.06em;
           text-align: center; } }
-      html .page-wrap .page-content .content, body .page-wrap .page-content .content {
+      body .page-wrap .page-content .content {
         margin: 0 auto;
         padding: 0 24px;
         color: black;
         font-family: 'Galaxie', Sans-Serif; }
         @media (min-width: 786px) {
-          html .page-wrap .page-content .content, body .page-wrap .page-content .content {
+          body .page-wrap .page-content .content {
             width: 80%;
             padding: 0; } }
-        html .page-wrap .page-content .content p, body .page-wrap .page-content .content p {
+        body .page-wrap .page-content .content p {
           margin: 0;
           padding: 50px 0;
           text-align: justify;
           font-size: 12px;
           line-height: 20px; }
           @media (min-width: 786px) {
-            html .page-wrap .page-content .content p, body .page-wrap .page-content .content p {
+            body .page-wrap .page-content .content p {
               font-size: 18px;
               line-height: 26px; } }
-      html .page-wrap .page-content .mobile-h1, body .page-wrap .page-content .mobile-h1 {
+      body .page-wrap .page-content .mobile-h1 {
         font-family: "HUGEAvantGardeBold";
         font-size: 36px;
         padding-top: 50px;
         margin: 0; }
         @media (min-width: 786px) {
-          html .page-wrap .page-content .mobile-h1, body .page-wrap .page-content .mobile-h1 {
+          body .page-wrap .page-content .mobile-h1 {
             display: none; } }
 
 .copyright {

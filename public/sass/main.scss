@@ -8,6 +8,10 @@
 }
 
 html, body {
+
+}
+
+body {
   margin: 0;
   padding: 0;
   color: #fff;
@@ -253,6 +257,9 @@ html, body {
       .page-content {
         left: 250px;
         @include transition;
+        @include desktop {
+          left: 0;
+        }
 
       }
       .huge-logo {
@@ -321,7 +328,7 @@ html, body {
         }
         @include desktop {
           position: absolute;
-          width: 60%;
+          width: 625px;
           top: 45%;
           left: 50%;
           -webkit-transform: translate(-50%, -50%);
