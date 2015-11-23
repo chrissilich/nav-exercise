@@ -8,7 +8,7 @@
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 
@@ -153,7 +153,6 @@ body {
     @include desktop {
       display: none;
     }
-
     &:before {
       content: "";
       position: absolute;
@@ -188,7 +187,8 @@ body {
       font-family: 'HUGEAvantGardeBold';
       text-decoration: none;
       cursor: pointer;
-      &:hover {
+      &:hover,
+      &.active {
         > a {
           background: $white;
           color: $magenta;
@@ -262,7 +262,12 @@ body {
         @include desktop {
           left: 0;
         }
-
+      }
+      .mobile-mask {
+        display: block;
+        @include desktop {
+          display: none;
+        }
       }
       .huge-logo {
         left: 24px;
@@ -284,9 +289,8 @@ body {
     }
   }
 
-
   .page-wrap {
-
+      height: 100%;
     .huge-logo {
       left: -50%;
       background-image: url(../images/HUGE-white.png);
@@ -310,7 +314,14 @@ body {
       z-index: 0;
       overflow: hidden;
       height: 100%;
-
+      .mobile-mask {
+        display: none;
+        z-index: 1;
+        background-color: $translucent_black;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
       .overlay {
         z-index: 1;
         background-color: $translucent_black;
@@ -343,7 +354,7 @@ body {
           -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
           margin: 0;
-          font: 15vmin/1 HUGEAvantGardeBold;
+          font: 120px/1 HUGEAvantGardeBold;
           letter-spacing: -0.06em;
           text-align: center;
         }
