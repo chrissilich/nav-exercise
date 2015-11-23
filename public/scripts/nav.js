@@ -42,6 +42,8 @@
         var subNavItemList = navItemList[i].items;
         if (subNavItemList.length > 0) {
 
+          li.addEventListener("click", toggleSubnav);
+
           var subUl = document.createElement('ul');
           var dropArrow = document.createElement('div');
           subUl.setAttribute('class', navItemList[i].label)
@@ -69,3 +71,52 @@
     navJSON.send();
 
 })();
+
+
+// var elements = document.getElementsByTagName('li');
+// for(var i = 0, len = elements.length; i < len; i++) {
+//   elements[i].onclick = function () {
+//   // stuff
+
+//   }
+// }
+
+var toggleSubnav = function(e) {
+
+  e.preventDefault();
+
+  if (this.className.indexOf("active") == -1) {
+    // this li is not .active
+    document.getElementById("overlay").className = "overlay";
+    console.log("open subnav");
+
+    this.className += " active";
+  } else {
+    // this li is already active
+    console.log("close subnav");
+    closeAllSubnavs();
+  }
+
+
+}
+
+
+var closeAllSubnavs = function() {
+  // find all lis
+  document.querySelectorAll("li");
+  // loop through them
+  // remove .active from them
+
+  //this.className = this.className.replace("active", "");
+
+
+  document.getElementById("overlay").className = document.getElementById("overlay").className.replace("overlay", "");
+}
+
+/*
+var removeOverlay = function() {
+  document.getElementById("overlay").className = "";
+    console.log("overlaid");
+}
+*/
+
