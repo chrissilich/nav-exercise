@@ -10,8 +10,8 @@
   }
 
   navJSON.onreadystatechange = function() {
-    if (navJSON.readyState == XMLHttpRequest.DONE ) {
-      if(navJSON.status == 200){
+    if (navJSON.readyState === XMLHttpRequest.DONE ) {
+      if(navJSON.status === 200){
 
         data = JSON.parse(navJSON.responseText);
         buildNav(".desktop-nav");
@@ -22,7 +22,7 @@
         alert('there was an error and here is what the server said:' + httpRequest.status);
       }
     }
-  }
+  };
 
   var buildNav = function(selector) {
     var myNav = document.querySelector(selector);
@@ -46,7 +46,7 @@
 
         var subUl = document.createElement('ul');
         var dropArrow = document.createElement('div');
-        subUl.setAttribute('class', navItemList[i].label)
+        subUl.setAttribute('class', navItemList[i].label);
 
         li.appendChild(subUl);
         li.appendChild(dropArrow);
@@ -65,7 +65,7 @@
           subA.setAttribute('target', '_blank');
         }
       }
-    };
+    }
   };
   navJSON.open("GET", "/api/nav.json", true);
   navJSON.send();
@@ -75,10 +75,10 @@
 
     e.preventDefault();
 
-    if (this.className.indexOf("active") == -1) {
+    if (this.className.indexOf("active") === -1) {
       // this li is not .active
       closeAllSubnavs();
-      document.getElementById("overlay").className = "overlay";
+      document.getElementById("overlay").className += " overlay";
       console.log("open subnav");
 
       this.className += " active";
@@ -87,7 +87,7 @@
       console.log("close subnav");
       closeAllSubnavs();
     }
-  }
+  };
 
 
   var closeAllSubnavs = function() {
@@ -99,7 +99,7 @@
     for (var i = 0; i < $closingSubNavs.length; i++) {
 
       $closingSubNavs[i].className = $closingSubNavs[i].className.replace("active", "");
-    };
+    }
 
     // remove the overlay class form the overlay id
     document.getElementById("overlay").className = document.getElementById("overlay").className.replace("overlay", "");
